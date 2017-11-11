@@ -1,26 +1,34 @@
 # ember-text-test-helper
 
-This README outlines the details of collaborating on this Ember addon.
+[![Greenkeeper badge](https://badges.greenkeeper.io/kellyselden/ember-text-test-helper.svg)](https://greenkeeper.io/)
+[![npm version](https://badge.fury.io/js/ember-text-test-helper.svg)](https://badge.fury.io/js/ember-text-test-helper)
+[![Build Status](https://travis-ci.org/kellyselden/ember-text-test-helper.svg?branch=master)](https://travis-ci.org/kellyselden/ember-text-test-helper)
+![Ember Version](https://embadge.io/v1/badge.svg?start=2.12.0)
+
+`text` test helper that collapses spaces and newlines
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-text-test-helper`
-* `npm install`
+```sh
+ember install ember-text-test-helper
+```
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```hbs
+<span class="whitespace">
 
-## Running Tests
+  hello
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+  there
 
-## Building
+</span>
+```
 
-* `ember build`
+```js
+import text from 'ember-text-test-helper';
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+assert.equal(text('.whitespace'), 'hello there');
+```
+
+You can select one or many elements and they will all be collapsed into a single string. The test helper takes an argument of a string selector, or already selected elements via `document.querySelector` and `document.querySelectorAll`.
