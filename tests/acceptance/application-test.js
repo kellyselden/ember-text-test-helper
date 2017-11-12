@@ -10,25 +10,25 @@ test('visiting /', function(assert) {
   andThen(function() {
     assert.equal(
       text('.whitespace'),
-      'hello there',
+      'one two three',
       'trims, collapses, and removes newlines'
     );
 
     assert.equal(
       text('.array'),
-      'one two',
+      'one two three four',
       'selects and trims multiple'
     );
 
     assert.equal(
       text(document.querySelector('.whitespace')),
-      'hello there',
+      'one two three',
       'wraps already selected element'
     );
 
     assert.equal(
       text(document.querySelectorAll('.array')),
-      'one two',
+      'one two three four',
       'wraps already selected array'
     );
   });
