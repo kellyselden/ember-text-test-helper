@@ -9,7 +9,7 @@ export default selector => {
   }
   let text = Array.from(
     arrayLike,
-    element => element.textContent.trim()
+    element => element.textContent
   ).join(' ');
   return text.trim().replace(/[\n ]+/g, ' ');
 };
