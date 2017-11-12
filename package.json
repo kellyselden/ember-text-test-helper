@@ -1,6 +1,6 @@
 {
   "name": "ember-text-test-helper",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "`text` test helper that collapses spaces and newlines",
   "keywords": [
     "ember-addon"
