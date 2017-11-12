@@ -11,5 +11,5 @@ export default selector => {
     arrayLike,
     element => element.textContent.trim()
   ).join(' ');
-  return text.trim().replace(/[\n ]{2,}/g, ' ');
+  return text.trim().replace(/[\n ]+/g, ' ');
 };
