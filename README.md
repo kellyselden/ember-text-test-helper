@@ -3,7 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/kellyselden/ember-text-test-helper.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/ember-text-test-helper.svg)](https://badge.fury.io/js/ember-text-test-helper)
 [![Build Status](https://travis-ci.org/kellyselden/ember-text-test-helper.svg?branch=master)](https://travis-ci.org/kellyselden/ember-text-test-helper)
-![Ember Version](https://embadge.io/v1/badge.svg?start=2.12.0)
+[![Ember Version](https://img.shields.io/badge/ember-2.12%2B-brightgreen.svg)](https://www.emberjs.com/)
 
 `text` test helper that collapses spaces and newlines
 
