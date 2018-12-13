@@ -1,8 +1,7 @@
-/* eslint-env node */
 'use strict';
 
 module.exports = {
-  name: 'ember-text-test-helper',
+  name: require('./package').name,
 
   treeForAddonTestSupport(tree) {
     const Funnel = require('broccoli-funnel');
