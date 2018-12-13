@@ -1,4 +1,4 @@
-export default selector => {
+export default function text(selector) {
   let arrayLike;
   if (selector instanceof Element) {
     arrayLike = [selector];
@@ -12,4 +12,4 @@ export default selector => {
     element => element.textContent
   ).join(' ');
   return text.trim().replace(/[\n ]+/g, ' ');
-};
+}
