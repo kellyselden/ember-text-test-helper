@@ -1,13 +1,34 @@
-import { visit } from '@ember/test-helpers';
 import { module, test } from 'qunit';
-import { setupApplicationTest } from 'ember-qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import hbs from 'htmlbars-inline-precompile';
 import text from 'ember-text-test-helper';
 
-module('Acceptance | application', function(hooks) {
-  setupApplicationTest(hooks);
+module('Integration | Component | text', function(hooks) {
+  setupRenderingTest(hooks);
 
-  test('visiting /', async function(assert) {
-    await visit('/');
+  test('it renders', async function(assert) {
+    await render(hbs`
+      <span class="whitespace">
+
+        one
+        two
+
+        three </span>
+
+      <span class="array">
+
+        one
+
+      </span>
+      <span class="array">
+
+        two
+
+      <span>three</span>
+      <span>four</span>
+      </span>
+    `);
 
     assert.equal(
       text('.whitespace'),
